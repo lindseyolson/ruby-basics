@@ -1,0 +1,17 @@
+---
+- !ruby/object:Contact
+  phone_numbers:
+  - !ruby/object:PhoneNumber
+    kind: Cell
+    number: 763-245-9873
+  addresses:
+  - !ruby/object:Address
+    kind: Home
+    street_1: 1476 Breda Ave
+    street_2: ''
+    city: St. Paul
+    state: MN
+    postal_code: '55108'
+  first_name: Lindsey
+  middle_name: Marie
+  last_name: Olson
