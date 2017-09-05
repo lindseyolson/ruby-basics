@@ -30,4 +30,4 @@ puts "Customer.instances: %s" % Customer.instances.inspect
 puts "Customer.create: %s" % Customer.create("Lindsey")
 puts "Customer.create: %s" % Customer.create("Caleb")
 puts "Customer.instances: %s" % Customer.instances.inspect
-puts "Customer.find('Lindsey'): %s" % Customer.find('Lindsey')
+puts "Customer.find('Lindsey'): %s" % Customer.find('Lindsery')
