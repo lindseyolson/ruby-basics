@@ -1,0 +1,18 @@
+<!-- regular embedding tags -->
+<% 3.times do %>
+<p>fish</p>
+<% end %>
+
+<!-- output embedding tags -->
+<!-- Like regular embedding tags the Ruby code inside an
+output tag gets evaluated when the template is rendered.
+                 - - - - - - - - - -
+But unlike regular tags, the return value of the Ruby
+code gets included in the template in place of the tag. -->
+
+<%= 2 + 2 %></br>
+<%= Time.now %>
+
+<% [1, 5, 25].each do |number| %>
+<p><%= number %> fish</p>
+<% end %>
