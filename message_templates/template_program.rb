@@ -30,8 +30,9 @@ class TemplateProgram
 
     puts "Choose Template:"
     print_template_list(guest, hotel)
-
-
+    template_id = gets.chomp.to_i
+    template = find_template(template_id)
+    print_chosen_template(guest, hotel, template)
   end
 
   def print_hotel_list
@@ -52,6 +53,12 @@ class TemplateProgram
     end
   end
 
+  def print_chosen_template(guest, hotel, template)
+    puts template.print_templates(guest, hotel)
+  end
+
+
+# with additional time >> I would have created 1 function for the below to reuse for all
   def find_guest(guest_id)
     results = []
     guests.each do |guest|
@@ -71,6 +78,17 @@ class TemplateProgram
     end
     results[0] #if I had more time >> I would figure out a better way than just returning index 0
   end
+
+def find_template(template_id)
+  results = []
+  templates.each do |template|
+    if template.id == template_id
+      results.push(template)
+    end
+  end
+  results[0] #if I had more time >> I would figure out a better way than just returning index 0
+end
+
 end
 
 

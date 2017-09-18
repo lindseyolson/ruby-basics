@@ -1,4 +1,3 @@
-require './greeting'
 require './guest'
 require './hotel'
 

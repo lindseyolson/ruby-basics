@@ -8,6 +8,10 @@ class Template
     @message = message
   end
 
+  def id
+    @id
+  end
+
   def print_templates(guest, hotel)
     text = TextMessage.new(guest, hotel, message)
     id.to_s + ": " + text.greeting

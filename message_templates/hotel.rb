@@ -8,6 +8,10 @@ class Hotel
     @timezone = timezone
   end
 
+  def id
+    @id
+  end
+
   def print_hotel(format)
     case format
     when 'list_with_numbers'
@@ -16,5 +20,5 @@ class Hotel
       company
     end
   end
-  
+
 end
