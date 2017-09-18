@@ -32,10 +32,4 @@ class DataLoader
     templates
   end
 
-
 end
-
-# DataLoader.new.load_hotels
-
-# JsonToHash.new('./data/Guests.json').convert
-# JsonToHash.new('./data/Companies.json').convert

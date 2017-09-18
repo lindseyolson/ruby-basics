@@ -8,25 +8,9 @@ class Template
     @message = message
   end
 
-  def print_templates(guest)
-    
-    text = TextMessage.new(guest, message)
-    text.greeting
+  def print_templates(guest, hotel)
+    text = TextMessage.new(guest, hotel, message)
+    id.to_s + ": " + text.greeting
   end
 
 end
-
-
-# class Template
-#   attr_accessor :id, :message
-#
-#   def initialize(id, message)
-#     @id = id
-#     @message = message
-#   end
-#
-#   def print_templates(guest, hotel)
-#
-#   end
-#
-# end

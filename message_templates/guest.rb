@@ -21,10 +21,11 @@ class Guest
       when 'first'
         firstName
       when 'room_number'
-        reservation.inspect
+        room_number.to_s
       end
     end
 
-
-
+  def room_number
+    reservation['roomNumber']
+  end
 end

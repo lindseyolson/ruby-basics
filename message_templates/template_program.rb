@@ -20,27 +20,23 @@ class TemplateProgram
     print_hotel_list
     print "Enter number of hotel: "
     hotel_id = gets.chomp.to_i
+    hotel = find_hotel(hotel_id)
 
     puts "Choose Guest:"
     print_guest_list
     print "Enter number of guest: "
     guest_id = gets.chomp.to_i
     guest = find_guest(guest_id)
-    print_template_list(guest)
 
-
-
-
-
-    # puts "Choose Template:"
-    # print_template_list(guest)
+    puts "Choose Template:"
+    print_template_list(guest, hotel)
 
 
   end
 
   def print_hotel_list
     hotels.each do |hotel|
-      puts hotel.print_hotel
+      puts hotel.print_hotel('list_with_numbers')
     end
   end
 
@@ -50,9 +46,9 @@ class TemplateProgram
     end
   end
 
-  def print_template_list(guest)
+  def print_template_list(guest, hotel)
     templates.each do |template|
-      puts template.print_templates(guest)
+      puts template.print_templates(guest, hotel)
     end
   end
 
@@ -63,18 +59,20 @@ class TemplateProgram
         results.push(guest)
       end
     end
-    results[0]
+    results[0] #if I had more time >> I would figure out a better way than just returning index 0
   end
 
-
-
-
-
-
-
+  def find_hotel(hotel_id)
+    results = []
+    hotels.each do |hotel|
+      if hotel.id == hotel_id
+        results.push(hotel)
+      end
+    end
+    results[0] #if I had more time >> I would figure out a better way than just returning index 0
+  end
 end
 
 
 template = TemplateProgram.new
-# template.run
 template.run

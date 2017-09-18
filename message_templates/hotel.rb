@@ -8,11 +8,13 @@ class Hotel
     @timezone = timezone
   end
 
-  def print_hotel
-    id.to_s + ": " + company
+  def print_hotel(format)
+    case format
+    when 'list_with_numbers'
+      id.to_s + ": " + company
+    when 'company_name'
+      company
+    end
   end
-
+  
 end
-
-# a = Hotel.new(1, "Marriott", "St. Paul", "Central")
-# puts a.to_s
