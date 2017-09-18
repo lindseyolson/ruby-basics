@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "message": "<GREETING> <GUEST>, and welcome to <HOTEL>! Room <NUMBER> is now ready for you. Enjoy your stay, and let us know if you need anything."
+
+  },
+  {
+    "id": 2,
+    "message": "<GREETING> <GUEST>, and welcome to <HOTEL>! Thank you for staying with us."
+
+  }
+
+]
