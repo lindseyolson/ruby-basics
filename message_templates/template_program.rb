@@ -15,23 +15,31 @@ class TemplateProgram
     @guests = DataLoader.new.load_guests('./data/Guests.json')
     @templates = DataLoader.new.load_templates('./data/Templates.json')
 
+    puts "-" * 50
     puts "Send Text Message to Guest"
+    puts "-" * 50
     puts "Choose Hotel:"
+    puts "-" * 30
     print_hotel_list
     print "Enter number of hotel: "
-    hotel_id = gets.chomp.to_i
-    hotel = find_hotel(hotel_id)
+    input = gets.chomp.to_i
+    hotel = find_hotel(input)
 
+    puts "-" * 30
     puts "Choose Guest:"
+    puts "-" * 30
     print_guest_list
     print "Enter number of guest: "
-    guest_id = gets.chomp.to_i
-    guest = find_guest(guest_id)
+    input = gets.chomp.to_i
+    guest = find_guest(input)
 
+    puts "-" * 30
     puts "Choose Template:"
+    puts "-" * 30
     print_template_list(guest, hotel)
-    template_id = gets.chomp.to_i
-    template = find_template(template_id)
+    print "Enter number of template: "
+    input = gets.chomp.to_i
+    template = find_template(input)
     print_chosen_template(guest, hotel, template)
   end
 
